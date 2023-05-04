@@ -1,4 +1,4 @@
-# vrayGLSL_MAYA
+# VrayGLSL MAYA Shader Example
 
 ### Outline
 - Vray GLSL(Material)은 Vray 렌더링 엔진에서 GLSL 언어를 사용하여 효율적인 머티리얼을 만들기 위한 기술입니다. 
