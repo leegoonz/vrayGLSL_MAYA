@@ -15,12 +15,12 @@ void main()
     for(int i = 0; i < vr_NumLights; ++i)
     {
         vr_evalLight(i, vr_Position, normal, light);
-        float ndotl = dot(light.direction , normal);  
+        float ndotl = clamp(dot(light.direction , normal),0.0,1.0);  
         if(ndotl > 0.0)
         {
-            Lambert += clamp(ndotl,0.0,1.0);
+            Lambert += vec4(vec3(ndotl) * light.contribution,0.0);
         }
-    } 
+    }
     Lambert *=diffuse;
 
     // Output final color
